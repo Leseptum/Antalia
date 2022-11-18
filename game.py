@@ -5,7 +5,7 @@ import time
 gameabfrage= True
 spielrunden= 0
 
-vers = '0.1.0'
+vers = '0.1.1'
 
 class Player():
     #Player-data gespeiert als Objekt  ,magic,hp,doge,defence,ressistence
@@ -28,6 +28,12 @@ class Player():
         self.defence = end + lvl
         self.res = wp + lvl #resistence
         self.klasse = klasse
+    
+    def charakter_creation(self):
+        self.name = input("Wie heißt du? \n")
+        self.klasse = input("Welche klasse möchtest du spielen? \n1.Krieger \n2.Magier\n")
+
+
 class Monster():
     #Monster-data gespeiert als Objekt
     def __init__(self,name,exp,lvl,atk,hp):
@@ -47,18 +53,24 @@ def kampf(a,b):
         print('Kampf verloren')
         return False
 
+ 
+
+
+
+
 slime = Monster('Slime',1,1,1,1)
 minotaurus = Monster('Minotaurus',5,2,10,1)
 monsterlist = [slime,minotaurus]
 
-player = Player(input('Wie heist du?'),0,1,1,1,1,1,1,1,1,0)
-time.sleep(1)
+player = Player(0,0,0,0,0,0,0,0,0,0,0)
+player.charakter_creation()
 print('Hallo',player.name,'\nWilkommen in Antallia V:',vers)
 
-
+'''
 while gameabfrage == True:
     time.sleep(1)
     aktion=int(input('Was möchtest du tun? \n1.Kämpfen\n2.Ruhen\n'))
+ 
     #Kämpfen
     if aktion == 1:
         monster = random.choice(monsterlist)
@@ -73,6 +85,7 @@ while gameabfrage == True:
                 print('LEVEL UP')
         else:
             player.hp=player.hp-1
+ 
     #Ruhen
     if aktion == 2:
         player.hp =player.hp +5
@@ -80,6 +93,7 @@ while gameabfrage == True:
             player.lvl=player.lvl+1
             player.atk=player.atk+1
             player.exp=player.exp+1
+ 
     #Tod
     if player.hp == 0:
         if int(input('Weiterspielen? 1. JA 0. NEIN'))==1:
@@ -91,4 +105,4 @@ while gameabfrage == True:
     #Status
     if aktion == 3:
         print(inspect.getmembers(player))
-
+'''
