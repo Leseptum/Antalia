@@ -53,11 +53,6 @@ def kampf(a,b):
         print('Kampf verloren')
         return False
 
- 
-
-
-
-
 slime = Monster('Slime',1,1,1,1)
 minotaurus = Monster('Minotaurus',5,2,10,1)
 monsterlist = [slime,minotaurus]
