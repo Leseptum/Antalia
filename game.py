@@ -9,29 +9,35 @@ vers = '0.1.1'
 
 class Player():
     #Player-data gespeiert als Objekt  ,magic,hp,doge,defence,ressistence
-    def __init__(self,name,exp,lvl,str,dex,int,vit,agil,end,wp,klasse):
+    def __init__(self,name,exp,lvl,str,dex,int,con,end,wp,klasse):
         self.name = name
         self.exp = exp
         self.lvl = lvl
         self.str = str #strength
-        self.dexterity = dex # dexterity
+        self.dex= dex # dexterity
         self.int = int #intelligence
-        self.vit = vit #vitality
-        self.agil = agil #agility
+        self.con = con #constitusion
         self.end = end #endurence
-        self.wp = wp #willpower
+        self.wp = wp #willpower       
         self.atk = str + lvl
         self.pre = dex + lvl #precision
         self.mag = int + lvl #magic
-        self.hp = vit + lvl
-        self.doge = agil + lvl
+        self.hp = con + lvl
+        self.doge = dex + lvl
         self.defence = end + lvl
         self.res = wp + lvl #resistence
         self.klasse = klasse
-    
-    def charakter_creation(self):
+    def charakter_creation(self):   
         self.name = input("Wie heißt du? \n")
         self.klasse = input("Welche klasse möchtest du spielen? \n1.Krieger \n2.Magier\n")
+        match self.klasse:
+            case "1":
+                self.str=+1
+                self.con=+5
+                self.lvl=+1
+            case _:
+                print("keine gültige Klasse")
+
 
 
 class Monster():
@@ -53,17 +59,22 @@ def kampf(a,b):
         print('Kampf verloren')
         return False
 
+
+
+
 slime = Monster('Slime',1,1,1,1)
 minotaurus = Monster('Minotaurus',5,2,10,1)
 monsterlist = [slime,minotaurus]
 
-player = Player(0,0,0,0,0,0,0,0,0,0,0)
+
+
+
+player = Player(0,0,0,0,0,0,0,0,0,0)
 player.charakter_creation()
 print('Hallo',player.name,'\nWilkommen in Antallia V:',vers)
 
-'''
+
 while gameabfrage == True:
-    time.sleep(1)
     aktion=int(input('Was möchtest du tun? \n1.Kämpfen\n2.Ruhen\n'))
  
     #Kämpfen
@@ -90,7 +101,7 @@ while gameabfrage == True:
             player.exp=player.exp+1
  
     #Tod
-    if player.hp == 0:
+    if player.hp <= 0:
         if int(input('Weiterspielen? 1. JA 0. NEIN'))==1:
             spielrunden = spielrunden+1
         else:
@@ -100,4 +111,3 @@ while gameabfrage == True:
     #Status
     if aktion == 3:
         print(inspect.getmembers(player))
-'''
