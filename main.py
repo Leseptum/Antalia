@@ -1,3 +1,3 @@
 import json
-player=json.loads(open("player.json","r").read())
+player=json.loads(open("entity.json","r").read())
 
