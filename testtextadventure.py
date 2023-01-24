@@ -20,7 +20,6 @@ class Player():
         self.con = con #constitusion
         self.end = end #endurence
         self.wp = wp #willpower       
-        
         self.atk = str + lvl
         self.pre = dex + lvl #precision
         self.mag = int + lvl #magic
