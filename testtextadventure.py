@@ -10,8 +10,7 @@ class Player():
     #Player-data gespeiert als Objekt  ,magic,hp,doge,defence,ressistence
     def __init__(self,name,exp,lvl,str,dex,int,con,end,wp,klasse):
         self.name = name
-        self.klasse = klasse
-        
+        self.klasse = klasse        
         self.exp = exp
         self.lvl = lvl
         self.str = str #strength
