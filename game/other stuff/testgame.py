@@ -35,7 +35,7 @@ schwebeeffekt = 1
 schwebecount = 1
 spielerfigur = pygame.image.load("Tano.png")
 
-print(spielerfigur.get_rect().center)
+print(spielerfigur.get_rect())
 ''' 
 get_rect() / returns a new rectangle covering the entire surface
 
@@ -43,7 +43,7 @@ get_rect() / returns a new rectangle covering the entire surface
 '''
 
 
-spielaktiv = True
+spielaktiv = False
 # Schleife Hauptprogramm
 while spielaktiv:
     # Überprüfen, ob Nutzer eine Aktion durchgeführt hat
