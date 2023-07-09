@@ -39,8 +39,6 @@ class Player():
             case _:
                 print("keine gültige Klasse")
 
-
-
 class Monster():
     #Monster-ata gespeiert als Objekt
     def __init__(self,name,exp,lvl,atk,hp):
@@ -60,21 +58,18 @@ def kampf(a,b):
         print('Kampf verloren')
         return False
 
-
-
-
+# Monsterdefinieren
 slime = Monster('Slime',1,1,1,1)
 minotaurus = Monster('Minotaurus',5,2,10,1)
 monsterlist = [slime,minotaurus]
 
-
-
-
+#player 
 player = Player(0,0,0,0,0,0,0,0,0,0)
 player.charakter_creation()
 print('Hallo',player.name,'\nWilkommen in Antallia V:',vers)
 
 
+#mainloop
 while gameabfrage == True:
     aktion=int(input('Was möchtest du tun? \n1.Kämpfen\n2.Ruhen\n'))
  
