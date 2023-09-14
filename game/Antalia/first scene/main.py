@@ -1,3 +1,8 @@
+import turtle
+
+
+
+
 #methoden
 
 def char_create():
