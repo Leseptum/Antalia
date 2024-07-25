@@ -73,10 +73,9 @@ class Player:
             return self.health
 
 
+#PLAYER-ID-SEARCH
+def test():
+    test = Player(input("playerID:"))
+    print(test.getStats())
+    test.saveData()
 
-'''
-PLAYER-ID-SEARCH
-test = Player(input("playerID:"))
-print(test.getStats())
-test.saveData()
-'''
