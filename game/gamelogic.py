@@ -1,7 +1,9 @@
 import entity,json
 
+try:storydata = json.loads(open(f"game/text.json", "r").read())
+except:print("failed to load Storydata")
+
 def getText(message):
-    storydata = json.loads(open(f"game/text.json", "r").read())
     player=entity.Player(message.author.id)
     player.saveData()    
     
@@ -9,7 +11,7 @@ def getText(message):
         if player.name == None:
             player.lastMessageID = "name"
             player.saveData()
-            return "Hi\nWie heißt du?"
+            return "Hallo\nWie heißt du?"
         else:
             return f"Hallo {player.name}"
         
@@ -20,8 +22,7 @@ def getText(message):
         return f"hello {player.name},to play $s1"
     
     #befehle
-    if message.content == "$stats":
-        return f"{player.getStats()}"
+    if message.content == "$stats": return f"{player.getStats()}"
     
     #Story
     if message.content.startswith('$s'):
