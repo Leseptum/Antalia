@@ -50,13 +50,11 @@ class Player:
                              tempData["Wil"],
                              tempData["tempHP"],
                              tempData["XP"],
-                            tempData["Loc"],
-                            tempData["lmid"])
+                             tempData["Loc"],
+                             tempData["lmid"])
         except:
-            print("load playerdata : failed\nusing default")
+            print(f"Createt Player-data:{self.ID}")
             self.createStats(None,10,10,10,10,10,10,10,None,None,None)
-            
-            
             # muss Antwortconzept ausdenken. mabye mit erwarteAntwort = True/False
 
     def saveData(self):

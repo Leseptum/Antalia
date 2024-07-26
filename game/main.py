@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 async def on_ready():
     print(f'We have logged in as {client.user}')
 
-    game = discord.Game("Atmen")
+    game = discord.Game("V0.1.1")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event

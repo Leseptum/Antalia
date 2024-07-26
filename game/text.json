@@ -1,44 +1,27 @@
-[
-    {
-        "ID": 0,
-        "text": "Willkommen in Aventuria, \ndem Land der tapferen Helden und dunklen Gefahren!\nWas moechtest du als erstes tun?\n1. Erkunde die Stadt Silbermond\n2. Betrete die nahegelegene Wildnis\n3. Inventar Oeffnen\n",
+{
+    "0":{
+        "text": "Willkommen in Antalia, \ndem Land der tapferen Helden und dunklen Gefahren!\nWas moechtest du als erstes tun?\n1. Erkunde die Stadt Silbermond\n2. Betrete die nahegelegene Wildnis",
         "Antworten": {
-            "1": 1,
-            "2": 2,
-            "3": "inv",
-            "4": "status"
-        }
+            "1": "1",
+            "2": "2"
+        },
+        "Inventory":[],
+        "Location":"start"
     },
-    {
-        "ID": 1,
-        "text": "Du schlenderst durch die belebten Stra\u00dfen von Silbermond, umgeben von der Energie der Stadt. Die Ger\u00fcche und Kl\u00e4nge der Marktpl\u00e4tze f\u00fcllen die Luft.\nWas willst du tun?\n1. Besuche den Marktstand des exotischen H\u00e4ndlers\n2. Suche nach einem Schmied\n3. Genie\u00dfe ein Essen im Gasthaus\n4. Inventar Oeffnen\n",
+    "1":{
+        "text":"Filler1 input 1 pls",
         "Antworten": {
-            "1": 11,
-            "2": null,
-            "3": null,
-            "4": "inv"
-        }
+            "2": "2"
+        },
+        "Inventory":[],
+        "Location":"Loc1"
     },
-    {
-        "ID": 11,
-        "text": "Neugierig geworden von den verlockenden Ger\u00fcchen und exotischen Waren, machst du dich auf den Weg zum Marktstand des exotischen H\u00e4ndlers, um seine Angebote zu erkunden und vielleicht das ein oder andere Schn\u00e4ppchen zu machen.\n",
+    "2":{
+        "text": "Filler2 input 2 pls",
         "Antworten": {
-            "1": null,
-            "2": null,
-            "3": null,
-            "4": null,
-            "5": null
-        }
-    },
-    {
-        "ID": 2,
-        "text": "Du trittst mutig in die nahegelegene Wildnis ein, wo das Rauschen der Bl\u00e4tter und der Gesang der V\u00f6gel dich begr\u00fc\u00dfen. Ein Pfad f\u00fchrt dich durch den Wald.\n",
-        "Antworten": {
-            "1": null,
-            "2": null,
-            "3": null,
-            "4": null,
-            "5": null
-        }
+            "1":"1"
+        },
+        "Inventory":[],
+        "Location":"Loc2"
     }
-]
+}
