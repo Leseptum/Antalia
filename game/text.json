@@ -9,19 +9,65 @@
         "Location":"start"
     },
     "1":{
-        "text":"Filler1 input 1 pls",
+        "text":"Willkommen in der Stadt Silbermond.\n1.Gehe in die Tarverne und triff andere Spieler\n2.Gehe zum Kontor und schau nach Ausrüstung\n3.Gehe aus der Stadt in die Wildnis",
         "Antworten": {
-            "2": "2"
+            "1":"",
+            "2":"",
+            "3":"2"
         },
         "Inventory":[],
-        "Location":"Loc1"
+        "Location":"Silbermond"
     },
     "2":{
-        "text": "Filler2 input 2 pls",
+        "text": "Du stehst in der Wildnis vor Silbermond.\n1.Gehe nach Silbermond\n2.Gehe weiter Raus",
+        "Antworten": {
+            "1":"1",
+            "2":"22" 
+        },
+        "Inventory":[],
+        "Location":"Wildnis"
+    },
+    "22":{
+        "text": "Du stehst an einer Kreuzung, die Stadt ist noch in der Ferne zu sehen, in die eine Richtung eine kleine Hütte und in die andere zeigt ein Schild: \"nach Eisental\".\n1.Gehe zurück richtung Silbermond\n2.Gehe zur Hütte\n3.Gehe richtung Eisental ",
+        "Antworten": {
+            "1":"2",
+            "2":"3",
+            "3":"4"
+        },
+        "Inventory":[],
+        "Location":"Wildnis"
+    },
+    "3":{
+        "text": "Du stehst vor der Hütte, sie ist an vielen stellen von Moos überwachsen.\n1.gehe Hinein",
+        "Antworten": {
+            "1":"5"
+        },
+        "Inventory":[],
+        "Location":"Wildnis"
+    },
+    "4":{
+        "text": "Du stehst in der Wildnis, Silbermond ist nicht mehr zu sehen, vor dir der Weg nach Eisental [end of game,for now]\n1.Zurück zur Kreuzung",
+        "Antworten": {
+            "1":"22"
+        },
+        "Inventory":[],
+        "Location":"Wildnis"
+    },
+    "5":{
+        "text": "Du stehst in die Hütte, in einer Ecke schläft eine alte Dame.\n1.Wecke Sie",
+        "Antworten": {
+            "1":"6"
+        },
+        "Inventory":[],
+        "Location":"Wildnis"
+    },
+    "6":{
+        "text": "Die alte Dame wacht auf und beißt dir den Kopf ab[end of game,for now]\n1.respawn in Silbermond",
         "Antworten": {
             "1":"1"
         },
         "Inventory":[],
-        "Location":"Loc2"
+        "Location":"Wildnis"
     }
+
 }

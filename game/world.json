@@ -1,0 +1,77 @@
+{
+    "Govik": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": []
+    },
+    "Yalme": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": [
+            "Andrash",
+            "Erlotan"
+        ]
+    },
+    "Verdorben": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": []
+    },
+    "Garderlo": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": []
+    },
+    "Andrash": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": []
+    },
+    "Erlotan": {
+        "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu t\u00c3\u00b6ten",
+        "npc": [],
+        "player": [
+            "test",
+            "454697764190945312"
+        ],
+        "reachable": [
+            "Verdorben",
+            "Gaderlo",
+            "Andrash",
+            "Govik",
+            "Yalme",
+            "Erlotan Umland"
+        ]
+    },
+    "Erlotan Umland": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": [
+            "Au\u00c3\u0178enbezirke",
+            "Erlotan"
+        ]
+    },
+    "Erlotan Au\u00c3\u0178enbezirke": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": [
+            "Stadtmauern",
+            "Umland"
+        ]
+    },
+    "Erlotan Stadtmauern": {
+        "Trivia": "",
+        "npc": [],
+        "player": [],
+        "reachable": [
+            "Au\u00c3\u0178enbezirke"
+        ]
+    }
+}

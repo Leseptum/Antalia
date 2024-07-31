@@ -71,9 +71,21 @@ class Player:
             return self.health
 
 
+
+class World:
+    
+    def __init__(self):
+        self.json = json.loads(open(f"game/world.json","r").read())
+
+    def saveData(self):
+        world = (open(f"game/world.json","w"))
+        writeOutdata = json.dumps(self.json, indent=4)
+        world.write(writeOutdata)
+        world.close()
+
+
 #PLAYER-ID-SEARCH
 def test():
     test = Player(input("playerID:"))
     print(test.getStats())
     test.saveData()
-
