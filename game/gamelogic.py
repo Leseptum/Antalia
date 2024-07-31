@@ -23,8 +23,11 @@ def getText(message):
     if player.lastMessageID == "name":
         player.name = message.content[1:]
         player.lastMessageID = "0"
+        player.location = "Erlotan Umland"
+        world.json[player.location]["player"].append(str(player.ID))
         player.saveData()
-        return f"hello {player.name}, enter $"
+        world.saveData()
+        return f"hello {player.name}, enter $m"
     
     #befehle
     if message.content == "$":return"""
@@ -32,14 +35,14 @@ def getText(message):
     $       :  available Commands
     $hello  :  Start your Adventure and just say hello
     $stats  :  Get your stats
-    $m[]    :  move to the next available location (bsp: $m1)
+    $m[]    :  move to the next available location (bsp: $mErlotan)
     $m      :  show available locations and whrere you are
     """
     if message.content == "$stats": return f"{player.getStats()}"
     
     if message.content.startswith('$m'):
         if message.content == "$m":
-            return world.json[player.location]["reachable"]
+            return f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
         #print(message.content[2:])
         if message.content[2:] in world.json[player.location]["reachable"]:
             print(world.json[player.location]["player"])
@@ -52,7 +55,7 @@ def getText(message):
                 player.saveData()
                 print("write world.json/player.json")
             
-            return f"Du bist an folgendem Ort:{player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
+            return f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
         else:return "diesen Ort kannst du nicht erreichen"
 
     else:return "bad read"

@@ -3,7 +3,9 @@
         "Trivia": "",
         "npc": [],
         "player": [],
-        "reachable": []
+        "reachable": [
+            "Erlotan"
+        ]
     },
     "Yalme": {
         "Trivia": "",
@@ -18,19 +20,25 @@
         "Trivia": "",
         "npc": [],
         "player": [],
-        "reachable": []
+        "reachable": [
+            "Erlotan"
+        ]
     },
     "Garderlo": {
         "Trivia": "",
         "npc": [],
         "player": [],
-        "reachable": []
+        "reachable": [
+            "Erlotan"
+        ]
     },
     "Andrash": {
         "Trivia": "",
         "npc": [],
         "player": [],
-        "reachable": []
+        "reachable": [
+            "Erlotan"
+        ]
     },
     "Erlotan": {
         "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu t\u00c3\u00b6ten",
@@ -51,19 +59,21 @@
     "Erlotan Umland": {
         "Trivia": "",
         "npc": [],
-        "player": [],
+        "player": [
+            "454697764190945312"
+        ],
         "reachable": [
-            "Au\u00c3\u0178enbezirke",
+            "Erlotan Ausenbezirke",
             "Erlotan"
         ]
     },
-    "Erlotan Au\u00c3\u0178enbezirke": {
+    "Erlotan Ausenbezirke": {
         "Trivia": "",
         "npc": [],
         "player": [],
         "reachable": [
-            "Stadtmauern",
-            "Umland"
+            "Erlotan Stadtmauern",
+            "Erlotan Umland"
         ]
     },
     "Erlotan Stadtmauern": {
@@ -71,7 +81,7 @@
         "npc": [],
         "player": [],
         "reachable": [
-            "Au\u00c3\u0178enbezirke"
+            "Erlotan Ausenbezirke"
         ]
     }
 }
