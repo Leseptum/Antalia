@@ -17,7 +17,7 @@
         ]
     },
     "Verdorben": {
-        "Trivia": "",
+        "Trivia": "Einst ein Land des Wohlstand und der Harmonie, jetzt nur noch brutstätte für Monster",
         "npc": [],
         "player": [],
         "reachable": [
@@ -41,7 +41,7 @@
         ]
     },
     "Erlotan": {
-        "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu t\u00c3\u00b6ten",
+        "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu besiegen",
         "npc": [],
         "player": [
             "test",

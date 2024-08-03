@@ -53,16 +53,11 @@ def getText(message):
                 world.saveData()
                 player.location = message.content[2:]
                 player.saveData()
-                print("write world.json/player.json")
             
             return f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
         else:return "diesen Ort kannst du nicht erreichen"
 
     else:return "bad read"
-
-#TO-DO: world --> Dict
-
-
 
 
 
@@ -83,5 +78,4 @@ def getText(message):
 print("\n".join("{}\t{}".format(k, v) for k, v in storydata.items()))
 print((storydata["0"]["Antworten"]["2"]))
 '''
-
 
