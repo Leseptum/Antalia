@@ -70,8 +70,6 @@ class Player:
         elif damage <= 0:
             return self.health
 
-
-
 class World:
     
     def __init__(self):
@@ -82,6 +80,32 @@ class World:
         writeOutdata = json.dumps(self.json, indent=4)
         world.write(writeOutdata)
         world.close()
+    
+    def surroundings(self,playerlocation,playerID):
+        if self.json[playerlocation]["player"] == []:return"no Player"
+        
+        #Playerlist
+        clearlist=[]
+        for x in self.json[playerlocation]["player"]:
+            clearlist.append(f"{x}")
+        clearlist.remove(str(playerID))
+
+        #Playerlist(names)
+        playerlist=[]
+        for x in clearlist:
+            enemy =json.loads(open(f"playerData/{x}.json","r").read())
+            playerlist.append(enemy["name"])
+        
+        #NPC
+        npclist=[]
+        for x in self.json[playerlocation]["npc"]:
+            npclist.append(x)
+
+        #all
+        alle=playerlist+npclist
+        surroundings={"player":clearlist,"playernames":playerlist,"npc":npclist,"all":alle}
+
+        return surroundings
 
 
 #PLAYER-ID-SEARCH

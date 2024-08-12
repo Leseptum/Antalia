@@ -1,7 +1,7 @@
 {
     "Govik": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan"
@@ -9,7 +9,7 @@
     },
     "Yalme": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Andrash",
@@ -17,8 +17,8 @@
         ]
     },
     "Verdorben": {
-        "Trivia": "Einst ein Land des Wohlstand und der Harmonie, jetzt nur noch brutstätte für Monster",
-        "npc": [],
+        "Trivia": "Einst ein Land des Wohlstand und der Harmonie, jetzt nur noch brutst\u00c3\u00a4tte f\u00c3\u00bcr Monster",
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan"
@@ -26,7 +26,7 @@
     },
     "Garderlo": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan"
@@ -34,15 +34,16 @@
     },
     "Andrash": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan"
         ]
     },
     "Erlotan": {
+        "level": 1,
         "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu besiegen",
-        "npc": [],
+        "npc": {},
         "player": [
             "test",
             "454697764190945312"
@@ -58,10 +59,8 @@
     },
     "Erlotan Umland": {
         "Trivia": "",
-        "npc": [],
-        "player": [
-            "454697764190945312"
-        ],
+        "npc": {},
+        "player": [],
         "reachable": [
             "Erlotan Ausenbezirke",
             "Erlotan"
@@ -69,7 +68,7 @@
     },
     "Erlotan Ausenbezirke": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan Stadtmauern",
@@ -78,7 +77,7 @@
     },
     "Erlotan Stadtmauern": {
         "Trivia": "",
-        "npc": [],
+        "npc": {},
         "player": [],
         "reachable": [
             "Erlotan Ausenbezirke"

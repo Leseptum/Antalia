@@ -23,6 +23,7 @@ def getText(message):
     if player.lastMessageID == "name":
         player.name = message.content[1:]
         player.lastMessageID = "0"
+        player.lvl = 1
         player.location = "Erlotan Umland"
         world.json[player.location]["player"].append(str(player.ID))
         player.saveData()
@@ -36,27 +37,37 @@ def getText(message):
     $hello  :  Start your Adventure and just say hello
     $stats  :  Get your stats
     $m[]    :  move to the next available location (bsp: $mErlotan)
-    $m      :  show available locations and whrere you are
+    $m      :  show what is around you
     """
     if message.content == "$stats": return f"{player.getStats()}"
     
     if message.content.startswith('$m'):
-        if message.content == "$m":
-            return f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
-        #print(message.content[2:])
+        if player.name == None:return "enter $hello or $"
+        returnwert = f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}\nUm dich herrum sind:{world.surroundings(player.location,player.ID)["all"]}"
+
+        if message.content == "$m":return returnwert
+
         if message.content[2:] in world.json[player.location]["reachable"]:
-            print(world.json[player.location]["player"])
-            print(player.ID)
             if str(player.ID) in world.json[player.location]["player"]:
                 world.json[player.location]["player"].remove(str(player.ID))
                 world.json[message.content[2:]]["player"].append(str(player.ID))
                 world.saveData()
                 player.location = message.content[2:]
                 player.saveData()
-            
-            return f"Du bist an folgendem Ort: {player.location}\nDu kannst folgende Orte erreichen{world.json[player.location]["reachable"]}"
+            return returnwert
         else:return "diesen Ort kannst du nicht erreichen"
 
+    if message.content.startswith('$f'):
+        if player.name == None:return "enter $hello or $"
+        if message.content == "$f":return f"Um dich herrum sind: {world.surroundings(player.location,player.ID)["all"]}"
+        if message.content[2:] in world.surroundings(player.location,player.ID)["all"]:
+            return "reachable"
+            '''
+            if precision >= doge:
+                if defence >= damage:hit
+        
+            '''
+            
     else:return "bad read"
 
 
