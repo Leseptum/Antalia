@@ -42,7 +42,7 @@
     },
     "Erlotan": {
         "level": 1,
-        "Trivia": "Statd der Abenteurer und Ganoven, auf jeden 4. Bewohner gibt es ein Wesen welches sich das Geld damit verdient Monster zu besiegen",
+        "Trivia": "Statd der Abenteurer und Ganoven, die hälfte der Bewohner verdienen sich das Geld damit, Monster zu Jagen",
         "npc": {},
         "player": [
             "test",
